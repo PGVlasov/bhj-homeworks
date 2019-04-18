@@ -1,6 +1,6 @@
 "use strict"
 
-const holes = document.getElementById ('hole')
+const holes = document.getElementsByClassName('hole')
 const dead = document.getElementById ('dead')
 const lost = document.getElementById ('lost')
 
@@ -24,3 +24,4 @@ for (let hole of holes){
       }
     }
 }
+
