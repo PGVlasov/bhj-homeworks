@@ -1,6 +1,6 @@
 "use strict"
 
-const hole = document.getElementById ('hole')
+const holes = document.getElementById ('hole')
 const dead = document.getElementById ('dead')
 const lost = document.getElementById ('lost')
 

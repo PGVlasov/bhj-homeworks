@@ -10,6 +10,6 @@ cookie.onclick = function () {
     if (click % 2 === 0) {
         cookie.width = 150;
     } else {
-        cookie.width *= 300;
+        cookie.width = 300;
     }
 };
