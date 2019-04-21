@@ -1,3 +1,5 @@
+"use strict"
+
 class Game {
   constructor(container) {
     this.container = container;
@@ -17,6 +19,17 @@ class Game {
   }
 
   registerEvents() {
+    let context = this;
+    let symbol = this.currentSymbol.textContent;
+    document.addEventListener('keydown',function(event){
+      if(symbol === event.key){
+        context.success();
+        symbol = context.currentSymbol.textContent;
+      }else{
+        context.fail(); 
+        symbol = context.currentSymbol.textContent;   
+      }     
+    });
     /*
       TODO:
       Написать обработчик события, который откликается
