@@ -8,11 +8,12 @@ let showSuccess = document.querySelector('#modal_success');
 modalMain.className = 'modal modal_active';
 
 modalClose[0].onclick = function () {
-    modalMain.className = 'modal';
+    modalMain.style.display = 'none';
 };
 
 modalSuccess.onclick = function(){
-    showSuccess.className = 'modal modal_active';
+    modalMain.style.display = 'none';
+    showSuccess.classList.add('modal_active');
 }; 
 
 modalClose[1].onclick = function () {

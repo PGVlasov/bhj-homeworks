@@ -1,5 +1,4 @@
-"use strict"
-
+/*
 function siteMenu() {
     let menuLink = Array.from(document.querySelectorAll('ul li a.menu__link'));
     let menuSub = Array.from(document.querySelectorAll('ul.menu_sub'));
@@ -29,3 +28,22 @@ function siteMenu() {
 }
 
 siteMenu()
+*/
+
+const menuLinks = document.querySelectorAll('.menu__link');
+
+for (let link of Array.from(menuLinks)) {
+    link.onclick = function () {
+
+        const parent = link.parentElement;
+        if (parent.querySelector('.menu_sub').className === 'menu menu_sub') {
+            parent.querySelector('.menu_sub').className = 'menu menu_sub menu_active';
+        } else {
+            parent.querySelector('.menu_sub').className = 'menu menu_sub'
+        }
+
+        if (link.closest('.menu_main')) {
+            return false
+        }
+    }
+}
