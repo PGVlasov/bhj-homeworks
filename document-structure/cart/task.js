@@ -26,7 +26,7 @@ for(let btn of prodAdd) {
 		const parent = event.target.closest('.product');
 		const id = parent.dataset.id;
 		const src = parent.childNodes[3].src;
-		const value = parent.children[2].children[0].children[1].children[1].textContent;
+		const value = Number(document.querySelector('.product__quantity-value').textContent);
 		html(id, src, value);
 	});
 }

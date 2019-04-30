@@ -4,7 +4,8 @@ const tasksList = document.getElementById('tasks__list');
 let taskRemove= document.querySelectorAll('.task__remove');
 let tasks;
 
-if (localStorage.length !== 0){
+
+if (taskInput.value.length !== 0){
     tasks = localStorage.getItem('tasks').split(' ');
     for(let i=0;i<tasks.length;i++){
         pastHtml(tasks[i]);

@@ -1,5 +1,5 @@
 let texts = document.querySelectorAll("has-tooltip")
-let toolTip = document.queryCommandValue('.tooltip')
+let toolTip = document.querySelector('.tooltip')
 let tooltipActive = document.querySelector('.tooltip_active');
 
 for (let text of texts)  {
